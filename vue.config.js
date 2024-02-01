@@ -3,6 +3,6 @@ module.exports = {
   transpileDependencies: true,
   lintOnSave:false,
   devServer:{
-    proxy:"http://flycan.ren:8026"
+    proxy:"你要请求的网址"
   }
 }
