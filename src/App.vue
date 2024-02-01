@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!--    <Login></Login>-->
+    <router-view></router-view>
+    <Footer v-show="this.$route.meta.isShow"></Footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Login from  "./views/login/index"
+import Footer from '@/components/footer'
+import axios from "axios";
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    Login,
+    Footer
+  },
+  mounted() {
+
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+
 }
 </style>
